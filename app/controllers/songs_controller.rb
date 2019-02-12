@@ -47,10 +47,18 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:title)
+    params.require(:song).permit(:title, :artist_name)
   end
 end
 
 
-
+  def create
+    Post.create(post_params)
+  end
+ 
+  private
+ 
+  def post_params
+    params.require(:post).permit(:category_name, :content)
+  end
 
