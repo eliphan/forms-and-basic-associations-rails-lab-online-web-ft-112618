@@ -12,7 +12,8 @@
         <option value="<%= genre.name %>" ></option>
       <% end %>  
     </datalist>
-  
+    
+  <%= f.text_field "song[note_ids][]" %>
   
   <%= f.submit %>
 <% end %>
